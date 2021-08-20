@@ -86,7 +86,7 @@ try (
         PreparedStatement ps = conn.prepareStatement(sql)) {
     ps.setInt(1, 10);
     ps.setInt(2, 1000);
-    try (ResultSet rs = preparedStatement.executeQuery()) {
+    try (ResultSet rs = ps.executeQuery()) {
         while(rs.next()) {
             // ...
         }
